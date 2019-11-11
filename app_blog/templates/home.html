@@ -5,11 +5,14 @@
 
 <a href="{% url 'new' %}">글 작성하기</a>
 {% for blog in blogs.all %}
-    <div class= "container">
-        <a href ="{% url 'detail' blog.id%}"><h2>{{blog.title}}</h2></a>
-       <p>{{blog.date}}</p>
-       <p>{{blog.summary}}</p>
-
+    <div class= "card">
+        <div class="card-body">
+            <a href ="{% url 'detail' blog.id%}"><h2 class="card-title">{{blog.title}}</h2></a>
+            <div class="card-text">
+                <p>{{blog.date}}</p>
+                <p>{{blog.summary}}</p>
+            </div>
+        </div>
     </div>
 
 {% endfor %}
