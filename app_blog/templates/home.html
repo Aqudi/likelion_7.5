@@ -1,4 +1,9 @@
 {% extends 'base.html'%}
+{% load staticfiles %}
+
+{% block extra_headers %}
+<link rel="stylesheet" href="{% static 'css/home.css' %}">
+{% endblock %}
 
 {% block content %}
 <h1>Make your Blog!</h1>
@@ -14,7 +19,6 @@
             </div>
         </div>
     </div>
-
 {% endfor %}
 
 {%endblock%}
